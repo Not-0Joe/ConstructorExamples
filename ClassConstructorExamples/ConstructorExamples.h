@@ -1,24 +1,32 @@
-#ifndef SECOND_CLASS_EXAMPLE_H
-#define	SECOND_CLASS_EXAMPLE_H
+#ifndef CONSTRUCTOR_EXAMPLES_H
+#define CONSTRUCTOR_EXAMPLES_H
 
-class ClassExampleSecond
+// header files only purpose is to demonstrate ways of defining a defualt constructor this would not complie
+// due to defualt constructor abiguity
+
+class ConstructorExamples
 {
 public:
 
-	// using defualt, explicity defualted constructor
-	ClassExampleSecond() = default;
-	// overload using constructor delegation
-	ClassExampleSecond(int x) : ClassExampleSecond{ x, 0 } {}
-	// constructor using member initlizer list to init private members
-	ClassExampleSecond(int x, int y) : m_x{ x }, m_y{ y } {}
+	// all default constructors called when no arguments passed via
+	// ConstructorExamples constructorExamples; or ConstructorExamples constructorExamples{};
+
+	ConstructorExamples() {}
+
+	ConstructorExamples() = default;
+
+	ConstructorExamples(int x = 5, int y = 6) {}
 
 
 private:
-	int m_x = 0;
-	int m_y = 0;
+	// default Member Initializers(int x = 5;) are used every time any constructor is called, 
+	// unless that constructor explicitly overrides them in its Member Initializer List.
+	int x = 5;
+	int y = 6;
 };
 
 
 
 
-#endif // ! SECOND_CLASS_EXAMPLE_H
+#endif // !CONSTRUCTOR_EXAMPLES_H
+
