@@ -74,8 +74,4 @@ private:
 
 };
 
-
-
-
-
 #endif // !CLASS_EXAMPLE_FIRST

@@ -1,9 +1,9 @@
-// ClassConstructorExamples.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// ClassConstructorExamples.cpp : This file contains the 'main' function. Program execution begins and ends here
 
 #include <iostream>
 #include "FirstClass.h"
 #include "SecondClass.h"
+#include "ChaperTest.h"
 
 int main()
 {
@@ -22,6 +22,13 @@ int main()
     ClassExampleSecond secondExampleClass1{};
     ClassExampleSecond secondExampleClass2{ 1 };
     ClassExampleSecond secondExampleClass3{ 1,2 };
+
+    std::cout << "\nCHAPER 14.12 TEST RESULTS: \n";
+    
+    Ball def{};
+    Ball blue{ "blue" };
+    Ball twenty{ 20.0 };
+    Ball blueTwenty{ "blue", 20.0 };
 
 
 
