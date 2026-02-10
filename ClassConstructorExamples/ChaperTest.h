@@ -20,6 +20,8 @@ class Ball
 {
 public:
 
+	// reconfigure this to reduce redundacy make use of default values for init
+
 	Ball() = default;
 	
 	Ball(std::string color) : Ball{ color, 10.0 } { print(); }
